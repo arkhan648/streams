@@ -11,6 +11,31 @@ header {
   padding: 1rem;
 }
 
+#match-info {
+  margin: 1rem auto;
+  font-size: 1.1rem;
+}
+
+#channels-container {
+  margin: 1rem auto;
+}
+
+.channel-btn {
+  background: #0077cc;
+  color: white;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.channel-btn:hover {
+  background: #ff4500;
+}
+
 #player-container {
   margin: 1rem auto;
   max-width: 1000px;
