@@ -3,6 +3,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const matchId = urlParams.get("id"); // format = timestamp_index
 const frame = document.getElementById("stream-frame");
 const matchInfo = document.getElementById("match-info");
+const channelsContainer = document.getElementById("channels-container");
 
 if (!matchId) {
   frame.outerHTML = "<p>⚠ No match ID provided.</p>";
@@ -23,10 +24,24 @@ if (!matchId) {
               <p>${event.match}</p>
             `;
 
+            // Show all channels
+            channelsContainer.innerHTML = "";
             if (event.channels && event.channels.length > 0) {
-              frame.src = event.channels[0]; // first channel embed
+              event.channels.forEach((channelUrl, i) => {
+                const btn = document.createElement("a");
+                btn.href = "javascript:void(0)";
+                btn.className = "channel-btn";
+                btn.textContent = `Channel ${i + 1}`;
+                btn.addEventListener("click", () => {
+                  frame.src = channelUrl;
+                });
+                channelsContainer.appendChild(btn);
+              });
+
+              // Set first channel as default
+              frame.src = event.channels[0];
             } else {
-              frame.outerHTML = "<p>⚠ No stream available.</p>";
+              channelsContainer.innerHTML = "<p>⚠ No channels available.</p>";
             }
           }
         });
