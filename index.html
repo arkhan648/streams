@@ -8,22 +8,28 @@
 </head>
 <body>
   <header>
-    <h1>Watch Live Stream</h1>
+    <h1>⚽ Watch Live Stream</h1>
   </header>
 
   <main>
-    <div id="match-info"></div>
-    <div id="channels-container"></div>
-    <div id="player-container">
+    <section class="match-section">
+      <div id="match-info" class="match-info"></div>
+    </section>
+
+    <section class="channels-section">
+      <h2>📺 Available Channels</h2>
+      <div id="channels-container" class="channels"></div>
+    </section>
+
+    <section id="player-container" class="player-container">
       <iframe id="stream-frame" src="" allowfullscreen></iframe>
-    </div>
+    </section>
   </main>
 
   <footer>
-   
+    <p>© 2025 MethStreams | Live Sports Streaming</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-
