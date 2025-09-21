@@ -76,7 +76,18 @@ header {
   color: #fff;
 }
 
+/* Active Menu Item */
+.nav-menu li a.active {
+  background: #ff4747;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 0 8px rgba(255, 71, 71, 0.6);
+}
 
+/* Visited Link */
+.nav-menu li a:visited {
+  color: #bbb;
+}
 
 /* More Button */
 .more-btn a {
@@ -110,10 +121,12 @@ header {
 
 iframe {
   width: 100%;
+  
   min-height: 100vh! important; /* takes at least one full screen height */
   border: none;
   display: block;
 }
+
 
 
 
