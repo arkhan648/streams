@@ -161,6 +161,34 @@ font-size: 22px;
   transform: scale(1.05);
 }
 
+/* Alternative Server Button */
+.backuppage {
+  margin-top: 15px;
+}
+
+.backup-btn {
+  display: inline-block;
+  background: #ff6600;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 0 12px rgba(255, 102, 0, 0.6);
+  transition: all 0.3s ease;
+}
+
+.backup-btn:hover {
+  background: #ff8533;
+  box-shadow: 0 0 18px rgba(255, 133, 51, 0.8);
+  transform: scale(1.05);
+}
+
+
+
+
 /* Player */
 .player-container {
   margin: 1.5rem auto;
@@ -296,6 +324,7 @@ footer p {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
 
 
 
