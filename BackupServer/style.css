@@ -110,10 +110,11 @@ header {
 
 iframe {
   width: 100%;
-  min-height: 100vh; /* takes at least one full screen height */
+  min-height: 100vh! important; /* takes at least one full screen height */
   border: none;
   display: block;
 }
+
 
 
 
