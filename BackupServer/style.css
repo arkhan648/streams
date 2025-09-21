@@ -15,29 +15,31 @@ body {
 
 /* ====== HEADER MENUS ====== */
 header {
-  background: #000;
+  background: #111;
   padding: 8px 20px;
   display: flex;
   justify-content: center;
   border-bottom: 1px solid #ff5e00;
 }
 
-header h1 {
-font-size: 22px;
-}
-
-
-
 /* Default header */
 .main-header {
-  background: #000;
+  background: #111;
   padding: 10px 20px;
   display: flex;
   justify-content: center;
   transition: all 0.3s ease;
 }
 
-
+/* Sticky header */
+.main-header.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #111;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
 
 /* Base Nav Menu */
 .nav-menu {
@@ -64,7 +66,7 @@ font-size: 22px;
   color: #ddd;
   text-decoration: none;
   font-weight: 500;
-  padding: 6px 3px;
+  padding: 6px 12px;
   border-radius: 6px;
   transition: all 0.3s ease;
 }
@@ -124,6 +126,7 @@ footer {
   color: #888;
   border-top: 2px solid #0077cc;
 }
+
 
 
 
